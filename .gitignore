@@ -1,0 +1,19 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Compiled binary
+grpcurl.exe
+
+# Environment files
+.env
+
+# Optional cache directories
+.cache/
+dist/
