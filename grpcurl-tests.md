@@ -30,8 +30,6 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Bra
 
 ![CreateBook-Image](screenshots/image-2.png)
 
-````
-
 ---
 
 ### ✅ UpdateBook
@@ -40,7 +38,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Bra
 
 ```bash
 grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Brave New World - Updated\", \"author\": \"Aldous Huxley\", \"isbn\": \"9780060850524\", \"publisher\": \"Harper Perennial\", \"pageCount\": 300, \"stock\": 10 }" 127.0.0.1:50051 university.BookService/UpdateBook
-````
+```
 
 **Response:**
 
