@@ -46,6 +46,7 @@ grpc-library/
 - Get a loan by ID
 - Borrow a book
 - Return a book
+- Delete a loan
 
 ## 🚀 Getting Started
 
