@@ -14,7 +14,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.BookServic
 
 **Response:**
 
-![ListBooks-Image](image-1.png)
+![ListBooks-Image](screenshots/image-1.png)
 
 ---
 
@@ -28,7 +28,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Bra
 
 **Response:**
 
-![CreateBook-Image](image-2.png)
+![CreateBook-Image](screenshots/image-2.png)
 
 ````
 
@@ -44,7 +44,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Bra
 
 **Response:**
 
-![UpdateBook-Image](image-3.png)
+![UpdateBook-Image](screenshots/image-3.png)
 
 ---
 
@@ -58,7 +58,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\" }" 127.0.0.1:5005
 
 **Response:**
 
-![GetBook-Image](image-4.png)
+![GetBook-Image](screenshots/image-4.png)
 
 ---
 
@@ -72,7 +72,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\" }" 127.0.0.1:5005
 
 **Response:**
 
-![DeleteBook-Image](image-5.png)
+![DeleteBook-Image](screenshots/image-5.png)
 
 ---
 
@@ -86,7 +86,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.BookServic
 
 **Response:**
 
-![ListBooks(Post-Deletion)-Image](image-6.png)
+![ListBooks(Post-Deletion)-Image](screenshots/image-6.png)
 
 ---
 
@@ -100,7 +100,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\", \"name\": \"A
 
 **Response:**
 
-![CreateStudent-Image](image-7.png)
+![CreateStudent-Image](screenshots/image-7.png)
 
 ---
 
@@ -112,7 +112,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.StudentSer
 
 **Response:**
 
-![listStudents-Image](image-8.png)
+![listStudents-Image](screenshots/image-8.png)
 
 ---
 
@@ -124,7 +124,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\" }" 127.0.0.1:5
 
 **Response:**
 
-![GetStudent-Image](image-9.png)
+![GetStudent-Image](screenshots/image-9.png)
 
 ---
 
@@ -136,7 +136,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\", \"name\": \"A
 
 **Response:**
 
-![UpdateStudent-Image](image-10.png)
+![UpdateStudent-Image](screenshots/image-10.png)
 
 ---
 
@@ -148,7 +148,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\" }" 127.0.0.1:5
 
 **Response:**
 
-![DeleteStudent-Image](image-11.png)
+![DeleteStudent-Image](screenshots/image-11.png)
 
 ---
 
@@ -160,7 +160,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.StudentSer
 
 **Response:**
 
-![ListStudents(Post-Deletion)-Image](image-12.png)
+![ListStudents(Post-Deletion)-Image](screenshots/image-12.png)
 
 ---
 
@@ -176,7 +176,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\", \"studentId
 
 **Response:**
 
-![BorrowBook-Image](image-13.png)
+![BorrowBook-Image](screenshots/image-13.png)
 
 ---
 
@@ -190,7 +190,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.LoanServic
 
 **Response (after borrow):**
 
-![ListLoans-Image](image-14.png)
+![ListLoans-Image](screenshots/image-14.png)
 
 ---
 
@@ -204,7 +204,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\" }" 127.0.0.1
 
 **Response:**
 
-![GetLoan-Image](image-15.png)
+![GetLoan-Image](screenshots/image-15.png)
 
 ---
 
@@ -218,7 +218,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\" }" 127.0.0.1
 
 **Response:**
 
-![ReturnBook-Image](image-16.png)
+![ReturnBook-Image](screenshots/image-16.png)
 
 ---
 
@@ -232,7 +232,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\" }" 127.0.0.1
 
 **Response:**
 
-![DeleteLoan-Image](image-17.png)
+![DeleteLoan-Image](screenshots/image-17.png)
 
 ---
 
@@ -246,4 +246,4 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.LoanServic
 
 **Response:**
 
-![ListLoans(Post-Deletion)-Image](image-18.png)
+![ListLoans(Post-Deletion)-Image](screenshots/image-18.png)
