@@ -14,21 +14,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.BookServic
 
 **Response:**
 
-```json
-{
-  "books": [
-    {
-      "id": "1",
-      "title": "1984",
-      "author": "George Orwell",
-      "isbn": "9780451524935",
-      "publisher": "Plume",
-      "pageCount": 328,
-      "stock": 5
-    }
-  ]
-}
-```
+![ListBooks-Image](image-1.png)
 
 ---
 
@@ -42,17 +28,9 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Bra
 
 **Response:**
 
-```json
-{
-  "id": "2",
-  "title": "Brave New World",
-  "author": "Aldous Huxley",
-  "isbn": "9780060850524",
-  "publisher": "Harper Perennial",
-  "pageCount": 288,
-  "stock": 7
-}
-```
+![CreateBook-Image](image-2.png)
+
+````
 
 ---
 
@@ -62,21 +40,11 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Bra
 
 ```bash
 grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\", \"title\": \"Brave New World - Updated\", \"author\": \"Aldous Huxley\", \"isbn\": \"9780060850524\", \"publisher\": \"Harper Perennial\", \"pageCount\": 300, \"stock\": 10 }" 127.0.0.1:50051 university.BookService/UpdateBook
-```
+````
 
 **Response:**
 
-```json
-{
-  "id": "2",
-  "title": "Brave New World - Updated",
-  "author": "Aldous Huxley",
-  "isbn": "9780060850524",
-  "publisher": "Harper Perennial",
-  "pageCount": 300,
-  "stock": 10
-}
-```
+![UpdateBook-Image](image-3.png)
 
 ---
 
@@ -90,17 +58,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\" }" 127.0.0.1:5005
 
 **Response:**
 
-```json
-{
-  "id": "2",
-  "title": "Brave New World - Updated",
-  "author": "Aldous Huxley",
-  "isbn": "9780060850524",
-  "publisher": "Harper Perennial",
-  "pageCount": 300,
-  "stock": 10
-}
-```
+![GetBook-Image](image-4.png)
 
 ---
 
@@ -114,9 +72,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"2\" }" 127.0.0.1:5005
 
 **Response:**
 
-```json
-{}
-```
+![DeleteBook-Image](image-5.png)
 
 ---
 
@@ -130,21 +86,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.BookServic
 
 **Response:**
 
-```json
-{
-  "books": [
-    {
-      "id": "1",
-      "title": "1984",
-      "author": "George Orwell",
-      "isbn": "9780451524935",
-      "publisher": "Plume",
-      "pageCount": 328,
-      "stock": 5
-    }
-  ]
-}
-```
+![ListBooks(Post-Deletion)-Image](image-6.png)
 
 ---
 
@@ -158,15 +100,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\", \"name\": \"A
 
 **Response:**
 
-```json
-{
-  "id": "stu1",
-  "name": "Alice Smith",
-  "studentNumber": "2023001",
-  "email": "alice@example.com",
-  "isActive": true
-}
-```
+![CreateStudent-Image](image-7.png)
 
 ---
 
@@ -178,26 +112,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.StudentSer
 
 **Response:**
 
-```json
-{
-  "students": [
-    {
-      "id": "stu1",
-      "name": "Alice Smith",
-      "studentNumber": "2023001",
-      "email": "alice@example.com",
-      "isActive": true
-    },
-    {
-      "id": "stu1",
-      "name": "Alice Smith",
-      "studentNumber": "2023001",
-      "email": "alice@example.com",
-      "isActive": true
-    }
-  ]
-}
-```
+![listStudents-Image](image-8.png)
 
 ---
 
@@ -209,15 +124,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\" }" 127.0.0.1:5
 
 **Response:**
 
-```json
-{
-  "id": "stu1",
-  "name": "Alice Smith",
-  "studentNumber": "2023001",
-  "email": "alice@example.com",
-  "isActive": true
-}
-```
+![GetStudent-Image](image-9.png)
 
 ---
 
@@ -229,14 +136,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\", \"name\": \"A
 
 **Response:**
 
-```json
-{
-  "id": "stu1",
-  "name": "Alice Johnson",
-  "studentNumber": "2023001",
-  "email": "alice.johnson@example.com"
-}
-```
+![UpdateStudent-Image](image-10.png)
 
 ---
 
@@ -248,9 +148,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"stu1\" }" 127.0.0.1:5
 
 **Response:**
 
-```json
-{}
-```
+![DeleteStudent-Image](image-11.png)
 
 ---
 
@@ -262,19 +160,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.StudentSer
 
 **Response:**
 
-```json
-{
-  "students": [
-    {
-      "id": "stu1",
-      "name": "Alice Smith",
-      "studentNumber": "2023001",
-      "email": "alice@example.com",
-      "isActive": true
-    }
-  ]
-}
-```
+![ListStudents(Post-Deletion)-Image](image-12.png)
 
 ---
 
@@ -290,14 +176,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\", \"studentId
 
 **Response:**
 
-```json
-{
-  "id": "loan10",
-  "studentId": "stu100",
-  "bookId": "book100",
-  "loanDate": "2025-06-15"
-}
-```
+![BorrowBook-Image](image-13.png)
 
 ---
 
@@ -311,24 +190,7 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.LoanServic
 
 **Response (after borrow):**
 
-```json
-{
-  "loans": [
-    {
-      "id": "loan1",
-      "studentId": "stu1",
-      "bookId": "1",
-      "loanDate": "2025-06-15"
-    },
-    {
-      "id": "loan10",
-      "studentId": "stu100",
-      "bookId": "book100",
-      "loanDate": "2025-06-15"
-    }
-  ]
-}
-```
+![ListLoans-Image](image-14.png)
 
 ---
 
@@ -342,14 +204,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\" }" 127.0.0.1
 
 **Response:**
 
-```json
-{
-  "id": "loan10",
-  "studentId": "stu100",
-  "bookId": "book100",
-  "loanDate": "2025-06-15"
-}
-```
+![GetLoan-Image](image-15.png)
 
 ---
 
@@ -363,16 +218,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\" }" 127.0.0.1
 
 **Response:**
 
-```json
-{
-  "id": "loan10",
-  "studentId": "stu100",
-  "bookId": "book100",
-  "loanDate": "2025-06-15",
-  "returnDate": "2025-06-15",
-  "status": "RETURNED"
-}
-```
+![ReturnBook-Image](image-16.png)
 
 ---
 
@@ -386,9 +232,7 @@ grpcurl -plaintext -proto university.proto -d "{ \"id\": \"loan10\" }" 127.0.0.1
 
 **Response:**
 
-```json
-{}
-```
+![DeleteLoan-Image](image-17.png)
 
 ---
 
@@ -402,15 +246,4 @@ grpcurl -plaintext -proto university.proto 127.0.0.1:50051 university.LoanServic
 
 **Response:**
 
-```json
-{
-  "loans": [
-    {
-      "id": "loan1",
-      "studentId": "stu1",
-      "bookId": "1",
-      "loanDate": "2025-06-15"
-    }
-  ]
-}
-```
+![ListLoans(Post-Deletion)-Image](image-18.png)
